@@ -1,0 +1,61 @@
+html, body {
+  background: black;
+  color: #00b800;
+  margin:0;
+  padding: 0;
+  padding-top: 10px;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+}
+
+body {
+  font-weight: 400;
+}
+
+button {
+  font-family: 'Press Start 2P', cursive;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  background: #a80020;
+  background: #00b800;
+  padding: 1em 2em;
+  text-transform: uppercase;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+h1 {
+  color: #a5a2a2;
+  line-height: 40px;
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.game-text {
+  font-size: 20px;
+  text-align:center;
+}
+
+textarea {
+  font-family: 'Press Start 2P', cursive;
+  border: 3px solid black;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  outline: none;
+  height: 200px;
+  background: #00b800;
+  padding: 10px;
+}
+
+textarea:disabled {
+  background-color: #a5a2a2;
+}
