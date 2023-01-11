@@ -7,6 +7,7 @@ function App() {
   const [wordcount, setWordcount] = useState(0)
   const [isGameOn, setIsGameOn] = useState(false)
   const [userInput, setUserInput] = useState('')
+  const textareaRef = useRef(null)
  
   useEffect(()=> {
     if(isGameOn && time > 0) {
@@ -32,6 +33,8 @@ function App() {
     setIsGameOn(true)
     setTime(GAME_TIME)
     setUserInput("")
+    setWordcount(0)
+    textareaRef.current.focus()
   }
 
   function endGame() {
@@ -44,9 +47,11 @@ function App() {
       <h1>Speed Typing Game</h1>
       <p className='game-text'>How fast can you type?</p>
       <textarea 
+        ref={textareaRef}
         name="userInput"
         value={userInput}
         onChange={handleChange}
+        disabled={!isGameOn}
       />
       <p className='game-text'>Time remaining: {time}</p>
       <button onClick={startGame} disabled={isGameOn}>Start</button>
