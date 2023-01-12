@@ -30,10 +30,12 @@ function App() {
   }
 
   function startGame() {
+      
     setIsGameOn(true)
     setTime(GAME_TIME)
     setUserInput("")
     setWordcount(0)
+    textareaRef.current.disabled = false
     textareaRef.current.focus()
   }
 
